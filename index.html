@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Test sur le formulaire</title>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container-fluid">
+  <div class="row justify-content-center">
+    <div class="container text-center p-0 mt-3 mb-2" style="width:70%!important;">
+      <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+        <h2 id="heading">Enregistrement des commandes</h2>
+          <form id="msform">
+            <!-- progressbar -->
+            <ul id="progressbar">
+              <li class="active" id="account"><strong>Type</strong></li>
+              <li id="personal"><strong>Aide</strong></li>
+              <li id="payment"><strong>Besoin</strong></li>
+              <li id="formulaire"><strong>Formulaire</strong></li>
+              <li id="confirm"><strong>Finition</strong></li>
+            </ul>
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+            </div> 
+            <br> 
+            <!-- fieldsets -->
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">A quoi ressemble le bébé ?</h2>
+                    <hr>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Etape 1 sur 5</h2>
+                  </div>
+                </div> 
+                <div class="container-fluid">
+                  <div class="row justify-content-center">
+                    <select class="form-control" name="choix1" id="choix1">
+                      <option value="appartement">Appartement</option>
+                      <option value="maison">Maison</option>
+                      <option value="local">Local Commercial</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                  </div>
+                </div>
+              </div> 
+              <input type="button" name="next" class="next action-button" value="Suivant" />
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">En quoi peut-on vous aider ?</h2>
+                    <hr>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Etape 2 sur 5</h2>
+                  </div>
+                </div> 
+                <div class="container-fluid">
+                  <div class="row justify-content-center">
+                    <select class="form-control" name="choix2" id="choix2">
+                      <option value="renovation_totale">Rénovation totale</option>
+                      <option value="renovation_partielle">Rénovation partielle</option>
+                      <option value="piece">1 Pièce seulement</option>
+                    </select>
+                  </div>
+                </div>
+              </div> 
+              <input type="button" name="next" class="next action-button" value="Suivant" /> 
+              <input type="button" name="previous" class="previous action-button-previous" value="Précèdent" />
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">
+                      Quel corps de métiers avez-vous besoin ?
+                    </h2>
+                    <hr>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Etape 3 sur 5</h2>
+                  </div>
+                </div> 
+                <div class="container-fluid">
+                  <div class="row justify-content-center">
+                    <select class="form-control" name="choix3" id="choix3">
+                      <option value="plan">Plan 2D/3D</option>
+                      <option value="enduit">Enduit/Peinture</option>
+                      <option value="plomberie">Plomberie</option>
+                      <option value="menu">Menuiseries intérieures</option>
+                      <option value="cuisine">Cuisine</option>
+                      <option value="carrelage">Carrelage</option>
+                      <option value="parquet">Parquet</option>
+                      <option value="isolation">Isolation</option>
+                      <option value="cloisonnement">Cloisonnement</option>
+                      <option value="decoration">Décoration</option>
+                      <option value="autre">Autre</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <input type="button" name="next" class="next action-button" value="Suivant" /> 
+              <input type="button" name="previous" class="previous action-button-previous" value="Précèdent" />
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">
+                      Pour terminer, pouvez-vous nous communiquer :
+                    </h2>
+                    <hr>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Etape 4 sur 5</h2>
+                  </div>
+                </div> 
+                <div class="container-fluid">
+                  <div class="row justify-content-center">
+                    <label class="fieldlabels">Votre nom et prénom *</label>
+                    <input type="text" name="nom" required style="background:white;border:1px solid grey;border-radius:5px;">
+                    <label class="fieldlabels">Le nombre en m² *</label>
+                    <input type="text" name="metre" required style="background:white;border:1px solid grey;border-radius:5px;">
+                    <label class="fieldlabels">Votre email *</label>
+                    <input type="mail" name="mail" required style="background:white;border:1px solid grey;border-radius:5px;">
+                    <label class="fieldlabels">Lieu de rénovation *</label>
+                    <input type="text" name="renovation" required style="background:white;border:1px solid grey;border-radius:5px;">
+                    <label class="fieldlabels">Votre téléphone *</label>
+                    <input type="tel" name="tel" required style="background:white;border:1px solid grey;border-radius:5px;">
+                    <label class="fieldlabels">Comment êtes-vous tombé(e)s sur nous ?</label>
+                    <select name="social" id="social" class="form-control">
+                      <option value="google">Google</option>
+                      <option value="linkedin">LinkedIn</option>
+                      <option value="tiktok">Tiktok</option>
+                      <option value="facebook">Facebook</option>
+                    </select>
+                    <label class="fieldlabels">Ajouter des fichiers (photos)</label>
+                    <input type="file" name="img" id="img">
+                    <label class="fieldlabels">Si vous souhaitez nous en dire plus, la parole est à vous :</label>
+                    <textarea name="msg" id="msg" cols="25" rows="10" class="form-control" autofocus autocomplete></textarea>
+                  </div>
+                </div>
+              </div>
+              <input type="button" name="next" class="next action-button" value="Envoyer" /> 
+              <input type="button" name="previous" class="previous action-button-previous" value="Précèdent" />
+            </fieldset>
+            <fieldset>
+              <div class="form-card">
+                <div class="row">
+                  <div class="col-7">
+                    <h2 class="fs-title">Formulaire:</h2>
+                  </div>
+                  <div class="col-5">
+                    <h2 class="steps">Etape 5 sur 5</h2>
+                  </div>
+                </div> 
+                <br><br>
+                <h2 class="purple-text text-center">
+                  <strong>
+                    Merci pour ces informations ! <br>
+                    Nos équipes reviendront vers vous dans les plus brefs délais.
+                  </strong>
+                </h2> 
+                <br>
+                <div class="row justify-content-center">
+                  <a href="index.html" class="action-button" style="width:30%;border:0px solid none;text-decoration:none">
+                    Retour à l'Accueil
+                  </a>
+                </div>
+                <br><br>
+              </div>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+  </div>
+</div>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
